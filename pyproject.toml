@@ -1,0 +1,28 @@
+[project]
+name = "continual-clip"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Vishal Thengane", email = "vgthengane@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "clip",
+    "hydra-core>=1.3.2",
+    "omegaconf>=2.3.0",
+    "tokenizers>=0.21.0",
+    "torch>=2.0.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.17.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.4,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""  # code in './continual-clip' instead of './src/continual-clip'
+
+[tool.uv.sources]
+clip = { git = "https://github.com/openai/CLIP.git" }
